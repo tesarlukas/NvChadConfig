@@ -1,5 +1,9 @@
 local options = {
-  ensure_installed = { "lua" },
+  ensure_installed = { "lua", "c", "rust", "javascript", "typescript", "ruby", "tsx"},
+
+  sync_install = false,
+
+  auto_install = true,
 
   highlight = {
     enable = true,
@@ -7,6 +11,15 @@ local options = {
   },
 
   indent = { enable = true },
+
+  autotag = {
+    enable = true,
+    filetypes = {
+      'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'tsx', 'jsx', 'rescript',
+      'css', 'lua', 'xml', 'php', 'markdown'
+    },
+  },
 }
 
 return options
+
