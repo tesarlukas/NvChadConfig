@@ -198,6 +198,13 @@ M.lspconfig = {
       "Floating diagnostic",
     },
 
+    ["<leader>fd"] = {
+      function()
+        vim.diagnostic.open_float { border = "rounded" }
+      end,
+      "Floating diagnostic",
+    },
+
     ["[d"] = {
       function()
         vim.diagnostic.goto_prev { float = { border = "rounded" } }

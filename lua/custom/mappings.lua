@@ -4,34 +4,39 @@ local M = {}
 M.disabled = {
   n = {
     ["<leader>h"] = "",
-    ["<C-a>"] = "",
     ["<leader>X"] = "",
     ["X"] = "",
     ["<C-s>"] = "",
-    -- tabufline
-    ["H"] = {
-      function()
-        require("nvchad_ui.tabufline").move_buf(-1)
-      end,
-      "move buffer backwards",
-    },
-    ["L"] = {
-      function()
-        require("nvchad_ui.tabufline").move_buf(-1)
-      end,
-      "move buffer backwards",
-    },
+
+    -- reserver for codeium
+    ["<A-G>"] = "",
+    ["<A-a>"] = "",
+    ["<A-d>"] = "",
+    ["<A-x>"] = "",
   },
 }
 
 -- Your custom mappings
 M.abc = {
   n = {
+    -- tabufline
     ["<leader>X"] = {
       function()
-        require("nvchad_ui.tabufline").close_AllBufs()
+        require("nvchad.tabufline").closeAllBufs()
       end,
       "close all buffers",
+    },
+    ["H"] = {
+      function()
+        require("nvchad.tabufline").move_buf(-1)
+      end,
+      "move buffer backwards",
+    },
+    ["L"] = {
+      function()
+        require("nvchad.tabufline").move_buf(1)
+      end,
+      "move buffer backwards",
     },
   },
 

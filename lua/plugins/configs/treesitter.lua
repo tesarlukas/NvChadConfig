@@ -1,5 +1,5 @@
 local options = {
-  ensure_installed = { "lua", "c", "rust", "javascript", "typescript", "ruby", "tsx"},
+  ensure_installed = { "lua", "c", "rust", "javascript", "typescript", "ruby", "tsx", 'vue'},
 
   sync_install = false,
 

@@ -42,6 +42,21 @@ local plugins = {
     },
   },
   {
+    "andweeb/presence.nvim",
+    config = function()
+      require("presence").setup {
+        editing_text = "",
+        file_explorer_text = "",
+        git_commit_text = "",
+        plugin_manager_text = "",
+        reading_text = "",
+        workspace_text = "",
+        line_number_text = "",
+      }
+    end,
+    lazy = false,
+  },
+  {
     "nvim-treesitter/playground",
     event = "VeryLazy",
     config = function()
