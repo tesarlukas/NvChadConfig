@@ -6,9 +6,12 @@ local lint = null_ls.builtins.diagnostics
 local sources = {
   formatting.prettierd,
   formatting.stylua,
+  formatting.black,
 
   lint.shellcheck,
-  lint.eslint_d
+  lint.eslint_d,
+  lint.mypy,
+  lint.ruff
   -- lint.eslint
 }
 

@@ -2,7 +2,7 @@ local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "clangd", "tsserver", "jsonls", "volar" }
+local servers = { "html", "cssls", "clangd", "tsserver", "jsonls", "volar", "pyright"}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -31,6 +31,8 @@ lspconfig.emmet_ls.setup {
     "vue",
     "tsx",
     "jsx",
+    "py",
+    "python",
   },
   init_options = {
     html = {
