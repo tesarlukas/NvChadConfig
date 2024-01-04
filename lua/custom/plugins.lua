@@ -81,7 +81,14 @@ local plugins = {
   },
   {
     "nvim-pack/nvim-spectre",
+    event = "VeryLazy",
+  },
+  {
+    "rmagatti/auto-session",
     lazy = false,
+    config = function()
+      require("auto-session").setup {}
+    end,
   },
 }
 return plugins
